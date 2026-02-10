@@ -1,0 +1,1471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eric Raszewski | Revenue Operations & GTM Strategy</title>
+  <meta name="description" content="Resume website for Eric Raszewski: Revenue Operations, GTM Strategy, territory design, pipeline and forecasting, GIS-powered market intelligence." />
+  <meta name="theme-color" content="#070a0f" />
+  <style>
+:root{
+  --bg:#070a0f;
+  --panel:#0b1220;
+  --text:#e8eefc;
+  --muted:#a9b6d3;
+  --line:rgba(255,255,255,.10);
+  --accent:#5eead4;
+  --accent2:#60a5fa;
+  --shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(94,234,212,.12), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(96,165,250,.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.45;
+}
+
+a{color:inherit; text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+
+.skip{
+  position:absolute; left:-9999px; top:auto;
+  width:1px; height:1px; overflow:hidden;
+}
+.skip:focus{
+  left:20px; top:20px; width:auto; height:auto;
+  background:var(--panel); padding:10px 12px;
+  border:1px solid var(--line); border-radius:12px;
+  z-index:50;
+}
+
+.topbar{
+  position:sticky; top:0; z-index:30;
+  background: rgba(7,10,15,.72);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar__inner{
+  display:flex; align-items:center; justify-content:space-between;
+  height:64px;
+  gap:16px;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px}
+.brand__dot{
+  width:12px; height:12px; border-radius:999px;
+  background:var(--accent);
+  box-shadow: 0 0 18px rgba(94,234,212,.55);
+}
+.brand__text{opacity:.95}
+
+.nav{display:flex; gap:18px; font-weight:650; color:var(--muted)}
+.nav a{padding:8px 8px; border-radius:10px}
+.nav a:hover{background:rgba(255,255,255,.04)}
+.topbar__cta{display:flex; gap:10px}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid rgba(94,234,212,.35);
+  background: linear-gradient(180deg, rgba(94,234,212,.20), rgba(94,234,212,.08));
+  color:var(--text);
+  font-weight:900;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+.btn:hover{transform: translateY(-1px); box-shadow: 0 18px 40px rgba(0,0,0,.35); filter:brightness(1.06)}
+.btn--ghost{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  font-weight:800;
+  color:var(--muted);
+}
+.btn--ghost:hover{color:var(--text)}
+
+.hamburger{
+  display:none;
+  width:44px; height:44px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+}
+.hamburger span{display:block; height:2px; margin:7px 10px; background:rgba(232,238,252,.75); border-radius:99px}
+
+.hero{padding:64px 0 28px; position:relative}
+.hero__grid{
+  display:grid;
+  grid-template-columns: 1.35fr .85fr;
+  gap:22px;
+  align-items:start;
+}
+.kicker{
+  color:var(--accent);
+  font-weight:950;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.82rem;
+  margin:0 0 12px
+}
+.hero h1{font-size:clamp(2rem, 3.6vw, 3.2rem); line-height:1.05; margin:0 0 14px}
+.lede{color:var(--muted); font-size:1.05rem; margin:0 0 18px; max-width:62ch}
+
+.hero__actions{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px}
+
+.stats{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:10px;
+  margin:0 0 14px;
+}
+.stat{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:12px 12px;
+}
+.stat dt{font-size:.78rem; color:var(--muted); font-weight:800}
+.stat dd{margin:6px 0 0; font-weight:950}
+
+.chips{display:flex; gap:10px; flex-wrap:wrap}
+.chip{
+  font-size:.85rem;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(96,165,250,.22);
+  background: rgba(96,165,250,.08);
+  color:rgba(232,238,252,.95);
+  font-weight:900;
+}
+
+.hero__card{
+  border:1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-radius:18px;
+  padding:14px;
+  box-shadow: var(--shadow);
+  position:sticky;
+  top:86px;
+}
+.avatar{
+  height:220px;
+  border-radius:16px;
+  background:
+    radial-gradient(700px 240px at 30% 0%, rgba(94,234,212,.22), transparent 60%),
+    radial-gradient(600px 240px at 90% 30%, rgba(96,165,250,.18), transparent 55%),
+    rgba(255,255,255,.05);
+  border:1px solid var(--line);
+}
+.hero__cardText{padding:12px 4px 2px}
+.hero__cardText h2{margin:10px 0 6px}
+.muted{color:var(--muted)}
+.bullets{margin:10px 0 0; padding-left:18px}
+.bullets li{margin:6px 0; color:rgba(232,238,252,.92)}
+.mini{margin-top:12px; color:var(--muted); font-weight:800}
+.sep{margin:0 8px; color:rgba(255,255,255,.22)}
+
+.section{padding:52px 0}
+.section--alt{
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.section__head{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:14px; margin-bottom:18px; flex-wrap:wrap;
+}
+.h2{font-size:1.55rem; margin:0}
+
+.timeline{display:flex; flex-direction:column; gap:12px}
+.role{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:14px;
+}
+.role__top{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.role__title{font-weight:950}
+.role__meta{color:var(--muted); font-weight:850}
+.role__company{color:rgba(232,238,252,.92); font-weight:900}
+.role__bullets{margin:10px 0 0; padding-left:18px}
+.role__bullets li{margin:7px 0; color:rgba(232,238,252,.90)}
+.badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+.badge{
+  font-size:.8rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(94,234,212,.25);
+  background: rgba(94,234,212,.08);
+  color:rgba(232,238,252,.95);
+  font-weight:900;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+.card{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(94,234,212,.22);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+.card h3{margin:0; font-size:1.05rem}
+.card p{margin:0; color:var(--muted)}
+.card .card__meta{display:flex; justify-content:space-between; gap:8px; color:rgba(232,238,252,.85); font-weight:800}
+.card .card__link{color:var(--accent); font-weight:950}
+.card .card__link:hover{filter:brightness(1.1)}
+
+.skills{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+.skill{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:14px;
+}
+.skill h3{margin:0 0 8px}
+.tags{display:flex; flex-wrap:wrap; gap:8px}
+.tag{
+  border:1px solid rgba(96,165,250,.22);
+  background: rgba(96,165,250,.08);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:900;
+  color:rgba(232,238,252,.92);
+  font-size:.85rem;
+}
+
+.edu{display:flex; flex-direction:column; gap:12px}
+.eduItem{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:14px;
+}
+.eduTop{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.eduName{font-weight:950}
+.eduMeta{color:var(--muted); font-weight:850}
+.eduDetail{margin-top:8px; color:rgba(232,238,252,.90); font-weight:850}
+
+.cta{padding:52px 0 66px}
+.cta__inner{
+  border:1px solid rgba(94,234,212,.22);
+  background:
+    radial-gradient(800px 300px at 20% 0%, rgba(94,234,212,.20), transparent 60%),
+    radial-gradient(700px 300px at 90% 30%, rgba(96,165,250,.14), transparent 55%),
+    rgba(255,255,255,.03);
+  border-radius:20px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  box-shadow: var(--shadow);
+}
+.cta__actions{display:flex; gap:10px; flex-wrap:wrap}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:26px 0;
+  color:var(--muted);
+}
+.footer__inner{display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap}
+.footer__right{display:flex; gap:14px; font-weight:900}
+.brand--footer{opacity:.9}
+
+@media (max-width: 980px){
+  .hero__grid{grid-template-columns:1fr;}
+  .hero__card{position:relative; top:auto}
+  .grid{grid-template-columns:1fr;}
+  .skills{grid-template-columns:1fr;}
+  .stats{grid-template-columns:1fr;}
+  .nav{display:none}
+  .topbar__cta{display:none}
+  .hamburger{display:block}
+}
+
+
+#avatar{
+  background-image:url("assets/eric-headshot.jpg");
+  background-size:cover;
+  background-position:center;
+}
+
+
+/* Personal section */
+.personalGrid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:12px;
+  align-items:start;
+}
+.personalCopy h3{margin:0}
+.personalBadges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.badge--alt{
+  border:1px solid rgba(96,165,250,.22);
+  background: rgba(96,165,250,.08);
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:10px;
+}
+.thumb{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius:14px;
+  overflow:hidden;
+  aspect-ratio: 4 / 3;
+  cursor:pointer;
+  position:relative;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.thumb:hover{
+  transform: translateY(-2px);
+  border-color: rgba(94,234,212,.22);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.small{font-size:.9rem}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,.78);
+  backdrop-filter: blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  z-index:60;
+}
+.lightbox.is-open{display:flex}
+.lightbox img{
+  max-width:min(1100px, 100%);
+  max-height: calc(100vh - 60px);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: 0 30px 90px rgba(0,0,0,.55);
+}
+.lightbox__close{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: rgba(232,238,252,.95);
+  font-size:28px;
+  font-weight:900;
+  cursor:pointer;
+}
+.lightbox__close:hover{filter:brightness(1.1)}
+
+@media (max-width: 980px){
+  .personalGrid{grid-template-columns:1fr;}
+  .gallery{grid-template-columns: repeat(2, minmax(0,1fr));}
+}
+
+
+/* Testimonials */
+.grid--testimonials{
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+.tcard{
+  position:relative;
+  padding:16px 16px 14px;
+}
+.tquote{
+  font-size:1.02rem;
+  line-height:1.45;
+  margin:0 0 12px;
+}
+.tmark{
+  position:absolute;
+  top:12px;
+  right:14px;
+  opacity:.12;
+  font-size:40px;
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+.tmeta{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.tname{
+  font-weight:750;
+}
+.trole{
+  color: var(--muted);
+  font-size:.95rem;
+}
+.trel{
+  margin-top:10px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color: var(--muted);
+  font-size:.9rem;
+}
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background: rgba(94,234,212,.55);
+  box-shadow: 0 0 0 4px rgba(94,234,212,.10);
+}
+
+@media (max-width: 980px){
+  .grid--testimonials{grid-template-columns: 1fr;}
+}
+
+
+/* Header improvements */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(7,11,20,.72);
+  border-bottom: 1px solid rgba(232,238,252,.10);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 14px 0;
+}
+.nav a{
+  display:inline-flex;
+  align-items:center;
+  padding:10px 12px;
+  border-radius: 12px;
+  color: rgba(232,238,252,.82);
+  border:1px solid transparent;
+  white-space: nowrap;
+}
+.nav a:hover{
+  color: rgba(7,11,20,.95);
+  background: linear-gradient(90deg, rgba(94,234,212,1), rgba(96,165,250,1));
+  border-color: rgba(94,234,212,.20);
+}
+.nav .brand{
+  font-weight: 850;
+  letter-spacing: -.02em;
+}
+.navLinks{
+  display:flex;
+  flex-wrap: wrap;
+  gap:8px;
+  justify-content:flex-end;
+}
+@media (max-width: 980px){
+  .nav{
+    padding: 10px 0;
+  }
+  .nav a{ padding: 9px 10px; }
+  .navLinks{ justify-content:flex-start; }
+}
+
+/* Section accents */
+.section__head .h2{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.section__head .h2:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width: 76%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(94,234,212,1), rgba(96,165,250,1), rgba(167,139,250,1));
+  opacity: .9;
+}
+
+/* Card glow */
+.card{
+  box-shadow: 0 14px 40px rgba(0,0,0,.30);
+}
+.card:hover{
+  border-color: rgba(94,234,212,.20);
+  box-shadow: 0 18px 56px rgba(0,0,0,.42);
+}
+
+a.link, .link{
+  color: rgba(94,234,212,.95);
+}
+a.link:hover, .link:hover{
+  color: rgba(96,165,250,1);
+}
+
+/* Nav: reduce crowding */
+.nav a{ font-size: .95rem; }
+@media (max-width: 1200px){
+  .nav a{ font-size: .93rem; padding: 9px 10px; }
+}
+
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__dot"></span>
+        <span class="brand__text" id="brandName">Eric</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#experience">Experience</a>
+        <div class="navLinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        </div>
+</nav>
+
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" id="btnLinkedIn" href="#" rel="noopener">LinkedIn</a>
+        <a class="btn btn--ghost" id="btnResume" href="#" rel="noopener">Download PDF</a>
+        <a class="btn" id="btnEmail" href="#">Email</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="kicker" id="kicker"></p>
+          <h1 id="headline"></h1>
+          <p class="lede" id="summary"></p>
+
+          <div class="hero__actions">
+            <a class="btn" id="btnPrimary" href="#contact">Get in touch</a>
+            <a class="btn btn--ghost" id="btnSecondary" href="#experience">View experience</a>
+          </div>
+
+          <dl class="stats" id="stats"></dl>
+
+          <div class="chips" id="availability"></div>
+        </div>
+
+        <aside class="hero__card" aria-label="Profile card">
+          <div class="avatar" id="avatar" role="img" aria-label="Profile photo"></div>
+          <div class="hero__cardText">
+            <h2 id="name"></h2>
+            <p id="tagline" class="muted"></p>
+            <ul class="bullets" id="highlights"></ul>
+
+            <div class="mini">
+              <a id="miniLinkedIn" href="#" rel="noopener">LinkedIn</a>
+              <span class="sep">•</span>
+              <a id="miniSite" href="#" rel="noopener">MapOps</a>
+              <span class="sep">•</span>
+              <a id="miniEmail" href="#">Email</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Experience</h2>
+          <p class="muted" id="experienceIntro"></p>
+        </div>
+        <div class="timeline" id="experienceList"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Education</h2>
+          <p class="muted">Formal training and credentials.</p>
+        </div>
+        <div class="edu" id="educationList"></div>
+      </div>
+    </section>
+
+<section id="projects" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Projects</h2>
+          <p class="muted">Selected work and what I am building now.</p>
+        </div>
+        <div class="grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Skills</h2>
+          <p class="muted">Practical strengths, not buzzwords.</p>
+        </div>
+        <div class="skills" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    
+    
+    
+    <section id="leadership" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Leadership Themes</h2>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Build structure where growth has outpaced systems</h3><p>I bring order and visibility to fast-growing environments so teams can scale without burning out.</p></div>
+          <div class="card"><h3>Develop people alongside performance</h3><p>I invest in coaching and growth, helping individuals succeed while driving strong team results.</p></div>
+          <div class="card"><h3>Translate strategy into operating reality</h3><p>I turn high-level goals into clear territories, rhythms, and responsibilities that teams can execute.</p></div>
+          <div class="card"><h3>Use data to support decisions, not replace judgment</h3><p>I combine data with context and experience to improve decision-making without overcomplicating execution.</p></div>
+        </div>
+      </div>
+    </section>
+    
+<section id="testimonials" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Testimonials</h2>
+          <p class="muted">A few notes from teammates, leaders, and partners I have worked with.</p>
+        </div>
+        <div class="grid grid--testimonials" id="testimonialGrid"></div>
+        <div class="section__foot">
+          <a class="link" href="https://www.linkedin.com/in/ericraszewski/details/recommendations/" target="_blank" rel="noreferrer">See more on LinkedIn →</a>
+        </div>
+      </div>
+    </section>
+
+<section id="personal" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2">Personal</h2>
+          <p class="muted">A few things that matter to me outside of work.</p>
+        </div>
+
+        <div class="personalGrid">
+          <div class="personalCopy card">
+            <h3 id="personalHeadline"></h3>
+            <p id="personalBlurb" class="muted"></p>
+            <div class="tags" id="personalTags"></div>
+
+            <div class="personalBadges" id="personalBadges"></div>
+          </div>
+
+          <div class="personalGallery">
+            <div class="gallery" id="personalGallery" aria-label="Personal photo gallery"></div>
+            <p class="muted small">Click a photo to view it larger.</p>
+          </div>
+        </div>
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+          <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+          <img id="lightboxImg" alt="Expanded photo" />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="contact" class="cta">
+      <div class="wrap cta__inner">
+        <div>
+          <h2 class="h2" id="contactTitle"></h2>
+          <p class="muted" id="contactBlurb"></p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn" id="contactEmail" href="#">Email me</a>
+          <a class="btn btn--ghost" id="contactLinkedIn" href="#" rel="noopener">Message on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--footer">
+          <span class="brand__dot"></span>
+          <span class="brand__text" id="footerName"></span>
+        </div>
+        <p class="muted" id="footerLine"></p>
+      </div>
+      <div class="footer__right">
+        <a id="footerLinkedIn" href="#" rel="noopener">LinkedIn</a>
+        <a id="footerSite" href="#" rel="noopener">MapOps</a>
+        <a id="footerResume" href="#" rel="noopener">PDF</a>
+        <a id="footerEmail" href="#">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+window.SITE = {
+  basics: {
+    name: "Eric Raszewski, MBA",
+    kicker: "Revenue Operations and GTM Strategy",
+    headline: "I help revenue teams decide where to focus, how to structure, and how to grow.",
+    summary:
+      "For the past 15+ years I have worked across sales leadership, go to market strategy, and revenue operations. I have led teams, owned targets, built territories, cleaned up pipelines, and turned messy CRM data into systems leadership can actually trust. I combine RevOps fundamentals with GIS powered market intelligence to make territory, coverage, and expansion decisions visible and defensible.",
+    tagline: "Territory Design | Pipeline and Forecasting | GIS Powered Market Intelligence",
+    locationLine: "Relocating to regional NSW, AU in 2026 (Full Work Rights, Subclass 491)",
+    links: {
+      linkedin: "https://www.linkedin.com/in/ericraszewski/",
+      site: "https://www.mapops.co",
+      email: "mailto:ericpatrickraszewski@gmail.com",
+      resumePdf: "assets/Eric_Raszewski_Resume_2026.pdf"
+    }
+  },
+
+  stats: [
+    { label: "Focus", value: "Territory and market intelligence" },
+    { label: "RevOps", value: "Pipeline health and forecasting" },
+    { label: "Edge", value: "GIS powered GTM strategy" }
+  ],
+
+  availabilityChips: [
+    "Full Australian work rights (Subclass 491)",
+    "Open to remote or hybrid roles",
+    "RevOps, Sales Ops, and GTM Strategy"
+  ],
+
+  highlights: [
+    "Smarter territory design and coverage strategy",
+    "Better account prioritization with real market signals",
+    "Clearer pipeline visibility and more confident forecasting"
+  ],
+
+  experienceIntro:
+    "A clean, resume style view of my recent roles and the kinds of outcomes I deliver.",
+
+  experience: [
+    {
+      title: "Founder",
+      company: "MapOps",
+      dates: "Nov 2025 - Present",
+      location: "San Diego Metropolitan Area",
+      bullets: [
+        "Built a territory and market intelligence platform to help GTM and RevOps teams visualize opportunity, align territories, and prioritize the right accounts.",
+        "Designed geospatial GTM models combining market signals, incentives, adoption trends, and competitive presence.",
+        "Helped teams move from rep intuition to data backed territory and coverage strategy.",
+        "Developed practical territory planning tools that connect directly to CRM execution.",
+        "Partnered with founders and revenue leaders to identify expansion markets and pipeline gaps."
+      ],
+      badges: ["Territory design", "GTM strategy", "GIS", "RevOps"]
+    },
+    {
+      title: "Key Account Manager",
+      company: "EthicalAds",
+      dates: "Feb 2024 - Present",
+      location: "United States",
+      bullets: [
+        "Managed strategic publisher and partner relationships, driving revenue growth and long term retention.",
+        "Owned key accounts and optimized performance through data driven campaign strategy.",
+        "Partnered with product and revenue teams to align advertiser goals with inventory and audience targeting.",
+        "Improved pipeline visibility and forecasting through structured account planning."
+      ],
+      badges: ["Account management", "Retention", "Forecasting"]
+    },
+    {
+      title: "Field Director (Supply Acquisition)",
+      company: "GoCamp",
+      dates: "Feb 2022 - Jan 2024",
+      location: "United States",
+      bullets: [
+        "Led supply side growth strategy for a national camper van marketplace.",
+        "Designed regional growth strategy to expand the supply footprint across new markets.",
+        "Used market analysis and demand signals to prioritize expansion regions.",
+        "Built and managed acquisition programs to grow the supply network efficiently.",
+        "Analyzed geographic performance trends to improve market coverage and partner retention."
+      ],
+      badges: ["Expansion", "Market analysis", "Territory"]
+    },
+    {
+      title: "Growth and GTM Sales Specialist",
+      company: "Edible Alchemy",
+      dates: "Jun 2020 - Nov 2023",
+      location: "San Diego, CA",
+      bullets: [
+        "Drove go to market execution for a fast growing consumer brand.",
+        "Developed regional sales strategy and distribution growth plans.",
+        "Managed key retail and wholesale relationships.",
+        "Identified high potential markets and expanded regional footprint.",
+        "Translated sales data into actionable territory and account strategy."
+      ],
+      badges: ["GTM execution", "Distribution", "Territory"]
+    },
+    {
+      title: "Director of Revenue Management",
+      company: "Bulk Wholesale Mushroom",
+      dates: "Jan 2021 - Feb 2022",
+      location: "United States",
+      bullets: [
+        "Owned revenue performance across pricing, distribution, and market expansion.",
+        "Developed GTM and pricing strategies to improve margin and volume.",
+        "Identified new market segments and expansion opportunities.",
+        "Led sales forecasting and revenue planning.",
+        "Aligned sales execution with production and supply chain realities."
+      ],
+      badges: ["Pricing", "Forecasting", "Revenue planning"]
+    },
+    {
+      title: "Head of Sales",
+      company: "Nutralife Wellness",
+      dates: "Mar 2018 - Jun 2020",
+      location: "Greater San Diego Area",
+      bullets: [
+        "Led national sales strategy and team performance.",
+        "Built go to market strategy, pricing, and channel mix.",
+        "Established territory structure and quota planning.",
+        "Improved forecasting and performance visibility for leadership."
+      ],
+      badges: ["Sales leadership", "GTM", "Quota planning"]
+    },
+    {
+      title: "Sales Manager",
+      company: "HempMeds",
+      dates: "Jan 2017 - Feb 2018",
+      location: "San Diego, CA",
+      bullets: [
+        "Managed Account Executive and Sales Development Representative teams (12 to 15).",
+        "Set SOP for the sales process including customer service and shipping.",
+        "Owned training, coaching, and development for sales staff.",
+        "Contributed to a 50 percent increase in overall yearly sales in 2017."
+      ],
+      badges: ["Team leadership", "Process", "Training"]
+    },
+    {
+      title: "Sales Manager",
+      company: "Evergreen (fka TapHunter)",
+      dates: "Jan 2016 - Dec 2016",
+      location: "Greater San Diego Area",
+      bullets: [
+        "Built the new hire training program for the company.",
+        "Executed ongoing training for Account Executives and Business Development Representatives.",
+        "Maintained productive revenue chains by managing and motivating staff.",
+        "Participated in recruiting and interviews to hire new talent."
+      ],
+      badges: ["Enablement", "Hiring", "Leadership"]
+    },
+    {
+      title: "Account Executive",
+      company: "Evergreen (fka TapHunter)",
+      dates: "Aug 2014 - Jan 2016",
+      location: "Greater San Diego Area",
+      bullets: [
+        "Developed selling strategy to increase revenue and client counts nationwide.",
+        "Spearheaded early major accounts that supported company growth.",
+        "Created a Business Development Representative program for expansion.",
+        "Closed new business monthly and implemented new customer acquisition processes."
+      ],
+      badges: ["New business", "Sales process", "Growth"]
+    },
+    {
+      title: "Marketing Consultant",
+      company: "Homes.com",
+      dates: "Jan 2014 - Aug 2014",
+      location: "",
+      bullets: [
+        "Identified and closed new business accounts nationwide.",
+        "Graduated a 30 day training program as a top producing sales representative.",
+        "Maintained a top 5 sales ranking for the duration of employment."
+      ],
+      badges: ["Outbound", "Closing", "Performance"]
+    },
+    {
+      title: "United States Marine",
+      company: "United States Marine Corps",
+      dates: "Sep 2008 - Sep 2012",
+      location: "Camp Pendleton, CA",
+      bullets: [
+        "Served on active duty in the United States Marine Corps."
+      ],
+      badges: ["Leadership", "Discipline"]
+    }
+  ],
+
+  projects: [
+    {
+      name: "MapOps",
+      blurb: "Market and territory intelligence models that help revenue teams understand where opportunity truly exists.",
+      metaLeft: "Company",
+      metaRight: "2025 to present",
+      linkText: "Visit",
+      linkUrl: "https://www.mapops.co"
+    },
+    {
+      name: "Territory planning models",
+      blurb: "Geospatial GTM models combining market signals, incentives, adoption trends, and competitive presence.",
+      metaLeft: "Work",
+      metaRight: "Ongoing",
+      linkText: "See on LinkedIn",
+      linkUrl: "https://www.linkedin.com/in/ericraszewski/"
+    },
+    {
+      name: "Pipeline visibility and forecasting systems",
+      blurb: "Turning messy CRM data into structured reporting leadership can trust.",
+      metaLeft: "RevOps",
+      metaRight: "15+ years",
+      linkText: "Contact",
+      linkUrl: "#contact"
+    }
+  ],
+
+  skills: [
+    { group: "Revenue Operations", tags: ["Revenue cycle management", "Revenue forecasting", "Pipeline health", "Territory design", "Account prioritization"] },
+    { group: "GTM Strategy", tags: ["Market expansion", "Segmentation", "Coverage strategy", "Sales enablement", "Operating cadence"] },
+    { group: "GIS and Location Intelligence", tags: ["Geological mapping", "Raster data", "Terrain analysis", "Spatial analysis", "Market intelligence models"] }
+  ],
+
+  education: [
+    {
+      school: "Michigan State University",
+      dates: "Apr 2025 - Aug 2025",
+      detail: "Professional Certificate in Geographic Information Systems"
+    },
+    {
+      school: "Brandman University (Chapman University System)",
+      dates: "2017 - 2020",
+      detail: "MBA, Entrepreneurship and Entrepreneurial Studies"
+    },
+    {
+      school: "Brandman University (Chapman University System)",
+      dates: "2012 - 2013",
+      detail: "BA, Organizational Leadership"
+    }
+  ],
+
+
+  testimonials: [
+    {
+      quote: "Eric is the type of manager every sales rep hopes to have. He adapts his leadership style to each person’s strengths and continues to be a mentor long after working together.",
+      name: "Dillon Read",
+      title: "Senior Enterprise Account Executive, Rippling",
+      relationship: "Direct report"
+    },
+    {
+      quote: "Few people get a manager who is also a true coach and mentor. Eric’s leadership laid the foundation for my entire sales career.",
+      name: "CJ Langley",
+      title: "Renewal Account Manager, ServiceNow",
+      relationship: "Direct report"
+    },
+    {
+      quote: "Eric gave me the tools to succeed in sales with no prior experience. His leadership created a cohesive, accountable, and highly successful team.",
+      name: "Tori Birdsall",
+      title: "Critical Consciousness Advocate",
+      relationship: "Direct report"
+    },
+    {
+      quote: "Eric reached out to help us sell a camper van that had been stuck for months. Within two weeks it was rented, and after a three week rental it sold. He made the entire process smooth for everyone.",
+      name: "Katie Wilson",
+      title: "Business Development, Paradigm Van Conversions",
+      relationship: "Colleague and partner"
+    },
+    {
+      quote: "Eric played a pivotal role in the growth of my campervan rental business. His introductions led to major partnerships and his insights helped us stay aligned with the industry.",
+      name: "Peter Nguyen",
+      title: "Partner and COO, Let’s PortuGO",
+      relationship: "External partner"
+    },
+    {
+      quote: "Eric is one of the most honest and dependable people you will meet. He can execute on anything and connects with people at every level.",
+      name: "Hillary A. Applin",
+      title: "Revenue Architect and GTM Operator",
+      relationship: "Former manager"
+    },
+    {
+      quote: "Eric is a world class human. He built culture, developed individuals, and consistently brought out the best in everyone around him.",
+      name: "Trina Villeza",
+      title: "Former direct report",
+      relationship: "Direct report"
+    },
+    {
+      quote: "Eric is one of the most knowledgeable and collaborative professionals I’ve worked with. He asks the right questions and makes people feel at ease, even empowered.",
+      name: "Nick Blaylock",
+      title: "AI and ML, Critical Infrastructure",
+      relationship: "Professional peer"
+    },
+    {
+      quote: "Working with Eric was truly a pleasure. His professionalism, creativity, and organizational skills made a real impact on our team.",
+      name: "Claire Witcomb",
+      title: "Compliance, Ops, Finance",
+      relationship: "Teammate"
+    }
+  ],
+
+  personal: {
+    headline: "Dad of 2. Married. Marine Corps veteran. Always outside when I can be.",
+    blurb:
+      "Outside of work you will usually find me chasing a trail, poking around tide pools, or planning the next camping or campervan trip. I care a lot about conservation and I am happiest when I am building something with my hands, whether that is a map, a plan, or a new fermentation experiment. I also love sports and fully expect to become a dangerous lawn bowls player in my 70s. For fun I play card games like MTG and Marvel Snap (I was once ranked 25th).",
+    tags: [
+      "Hiking",
+      "Camping",
+      "Campervans",
+      "Fishing",
+      "Conservation",
+      "Sports",
+      "Fermentation",
+      "Tide pools",
+      "MTG",
+      "Marvel Snap"
+    ],
+    badges: [
+      "Marine Corps veteran",
+      "Dad of 2",
+      "Ranked 25th in Marvel Snap"
+    ],
+    photos: [
+      { src: "assets/personal-marines.jpeg", alt: "Marine Corps group photo" },
+      { src: "assets/personal-tidepools.jpeg", alt: "Rocky tide pools on the coast" },
+      { src: "assets/personal-snow-dog.jpeg", alt: "Snowy hike with dog" },
+      { src: "assets/personal-campervan.jpeg", alt: "Campervan by the ocean" },
+      { src: "assets/personal-lawn-bowls.jpeg", alt: "Lawn bowls and a pint" },
+      { src: "assets/personal-fishing.jpeg", alt: "Fishing by the water" },
+      { src: "assets/personal-family.jpeg", alt: "Family hike photo" },
+      { src: "assets/personal-rugby-tots.jpeg", alt: "Rugby tots day" },
+      { src: "assets/personal-fermentation.jpeg", alt: "Fermentation jars on a counter" },
+      { src: "assets/personal-marvel-snap.jpeg", alt: "Marvel Snap rank screenshot" }
+    ]
+  },
+
+  contact: {
+    title: "Want sharper territory and pipeline visibility?",
+    blurb: "If you are building or scaling a revenue engine and want clearer visibility into where to go next, reach out."
+  },
+
+  footerLine: "Single page resume site. Update content in content.js if you want to tweak copy."
+};
+
+</script>
+<script>
+(function () {
+  const S = window.SITE;
+
+  // Simple mobile menu
+  const burger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".nav");
+  let mobileOpen = false;
+  let mobilePanel = null;
+
+  function openMobile() {
+    if (mobilePanel) return;
+    mobilePanel = document.createElement("div");
+    mobilePanel.style.position = "absolute";
+    mobilePanel.style.top = "64px";
+    mobilePanel.style.left = "0";
+    mobilePanel.style.right = "0";
+    mobilePanel.style.borderBottom = "1px solid rgba(255,255,255,.10)";
+    mobilePanel.style.background = "rgba(7,10,15,.95)";
+    mobilePanel.style.backdropFilter = "blur(12px)";
+    mobilePanel.style.padding = "12px 20px";
+    mobilePanel.style.display = "flex";
+    mobilePanel.style.flexWrap = "wrap";
+    mobilePanel.style.gap = "10px";
+
+    [...nav.querySelectorAll("a")].forEach(a => {
+      const b = a.cloneNode(true);
+      b.style.padding = "10px 12px";
+      b.style.border = "1px solid rgba(255,255,255,.10)";
+      b.style.borderRadius = "12px";
+      b.style.background = "rgba(255,255,255,.03)";
+      mobilePanel.appendChild(b);
+    });
+
+    document.querySelector(".topbar").appendChild(mobilePanel);
+  }
+
+  function closeMobile() {
+    if (mobilePanel) mobilePanel.remove();
+    mobilePanel = null;
+  }
+
+  burger?.addEventListener("click", () => {
+    mobileOpen = !mobileOpen;
+    burger.setAttribute("aria-expanded", String(mobileOpen));
+    mobileOpen ? openMobile() : closeMobile();
+  });
+
+  // Basics
+  const b = S.basics;
+  document.getElementById("brandName").textContent = b.name.split(",")[0] || "Eric";
+  document.getElementById("kicker").textContent = b.kicker;
+  document.getElementById("headline").textContent = b.headline;
+  document.getElementById("summary").textContent = b.summary;
+  document.getElementById("name").textContent = b.name;
+  document.getElementById("tagline").textContent = `${b.tagline} • ${b.locationLine}`;
+
+  // Links
+  const L = b.links;
+  const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
+
+  setHref("btnLinkedIn", L.linkedin);
+  setHref("miniLinkedIn", L.linkedin);
+  setHref("footerLinkedIn", L.linkedin);
+  setHref("contactLinkedIn", L.linkedin);
+
+  setHref("btnEmail", L.email);
+  setHref("miniEmail", L.email);
+  setHref("contactEmail", L.email);
+  setHref("footerEmail", L.email);
+
+  setHref("btnResume", L.resumePdf);
+  setHref("footerResume", L.resumePdf);
+
+  setHref("miniSite", L.site);
+  setHref("footerSite", L.site);
+
+  // Stats
+  const stats = document.getElementById("stats");
+  S.stats.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "stat";
+    const dt = document.createElement("dt");
+    dt.textContent = item.label;
+    const dd = document.createElement("dd");
+    dd.textContent = item.value;
+    wrap.appendChild(dt);
+    wrap.appendChild(dd);
+    stats.appendChild(wrap);
+  });
+
+  // Availability chips
+  const chips = document.getElementById("availability");
+  (S.availabilityChips || []).forEach(t => {
+    const s = document.createElement("span");
+    s.className = "chip";
+    s.textContent = t;
+    chips.appendChild(s);
+  });
+
+  // Highlights
+  const hl = document.getElementById("highlights");
+  (S.highlights || []).forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t;
+    hl.appendChild(li);
+  });
+
+  // Experience
+  document.getElementById("experienceIntro").textContent = S.experienceIntro || "";
+  const exp = document.getElementById("experienceList");
+  (S.experience || []).forEach(r => {
+    const card = document.createElement("article");
+    card.className = "role";
+
+    const top = document.createElement("div");
+    top.className = "role__top";
+
+    const left = document.createElement("div");
+    const title = document.createElement("div");
+    title.className = "role__title";
+    title.textContent = r.title;
+
+    const company = document.createElement("div");
+    company.className = "role__company";
+    company.textContent = r.company;
+
+    left.appendChild(title);
+    left.appendChild(company);
+
+    const right = document.createElement("div");
+    right.className = "role__meta";
+    const meta = [r.dates, r.location].filter(Boolean).join(" • ");
+    right.textContent = meta;
+
+    top.appendChild(left);
+    top.appendChild(right);
+
+    const ul = document.createElement("ul");
+    ul.className = "role__bullets";
+    (r.bullets || []).forEach(b => {
+      const li = document.createElement("li");
+      li.textContent = b;
+      ul.appendChild(li);
+    });
+
+    const badges = document.createElement("div");
+    badges.className = "badges";
+    (r.badges || []).forEach(x => {
+      const s = document.createElement("span");
+      s.className = "badge";
+      s.textContent = x;
+      badges.appendChild(s);
+    });
+
+    card.appendChild(top);
+    if ((r.bullets || []).length) card.appendChild(ul);
+    if ((r.badges || []).length) card.appendChild(badges);
+
+    exp.appendChild(card);
+  });
+
+  // Projects
+  function renderCards(list, mountId) {
+    const mount = document.getElementById(mountId);
+    (list || []).forEach(p => {
+      const a = document.createElement("a");
+      a.className = "card";
+      a.href = p.linkUrl;
+      a.rel = "noopener";
+      if (!String(p.linkUrl || "").startsWith("#")) a.target = "_blank";
+
+      const h = document.createElement("h3");
+      h.textContent = p.name;
+
+      const b = document.createElement("p");
+      b.textContent = p.blurb;
+
+      const meta = document.createElement("div");
+      meta.className = "card__meta";
+
+      const left = document.createElement("span");
+      left.textContent = p.metaLeft;
+
+      const right = document.createElement("span");
+      right.textContent = p.metaRight;
+
+      meta.appendChild(left);
+      meta.appendChild(right);
+
+      const link = document.createElement("div");
+      link.className = "card__link";
+      link.textContent = p.linkText;
+
+      a.appendChild(h);
+      a.appendChild(b);
+      a.appendChild(meta);
+      a.appendChild(link);
+
+      mount.appendChild(a);
+    });
+  }
+  renderCards(S.projects, "projectGrid");
+
+  // Skills
+  const skills = document.getElementById("skillsGrid");
+  (S.skills || []).forEach(g => {
+    const box = document.createElement("div");
+    box.className = "skill";
+
+    const h = document.createElement("h3");
+    h.textContent = g.group;
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    (g.tags || []).forEach(t => {
+      const s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = t;
+      tags.appendChild(s);
+    });
+
+    box.appendChild(h);
+    box.appendChild(tags);
+    skills.appendChild(box);
+  });
+
+
+
+  // Testimonials
+  if (S.testimonials && document.getElementById("testimonialGrid")){
+    const grid = document.getElementById("testimonialGrid");
+    S.testimonials.forEach(t => {
+      const card = document.createElement("div");
+      card.className = "card tcard";
+
+      const mark = document.createElement("div");
+      mark.className = "tmark";
+      mark.textContent = "“";
+
+      const q = document.createElement("p");
+      q.className = "tquote";
+      q.textContent = t.quote || "";
+
+      const meta = document.createElement("div");
+      meta.className = "tmeta";
+
+      const name = document.createElement("div");
+      name.className = "tname";
+      name.textContent = t.name || "";
+
+      const role = document.createElement("div");
+      role.className = "trole";
+      role.textContent = t.title || "";
+
+      meta.appendChild(name);
+      meta.appendChild(role);
+
+      const rel = document.createElement("div");
+      rel.className = "trel";
+
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      const relText = document.createElement("span");
+      relText.textContent = t.relationship || "";
+
+      rel.appendChild(dot);
+      rel.appendChild(relText);
+
+      card.appendChild(mark);
+      card.appendChild(q);
+      card.appendChild(meta);
+      if (t.relationship) card.appendChild(rel);
+
+      grid.appendChild(card);
+    });
+  }
+
+
+  // Personal
+  if (S.personal){
+    const ph = document.getElementById("personalHeadline");
+    const pb = document.getElementById("personalBlurb");
+    const pt = document.getElementById("personalTags");
+    const pbad = document.getElementById("personalBadges");
+    const pg = document.getElementById("personalGallery");
+
+    if (ph) ph.textContent = S.personal.headline || "";
+    if (pb) pb.textContent = S.personal.blurb || "";
+
+    (S.personal.tags || []).forEach(t => {
+      const s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = t;
+      pt?.appendChild(s);
+    });
+
+    (S.personal.badges || []).forEach(x => {
+      const s = document.createElement("span");
+      s.className = "badge badge--alt";
+      s.textContent = x;
+      pbad?.appendChild(s);
+    });
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightboxImg");
+    const lbClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src, alt){
+      if (!lb || !lbImg) return;
+      lbImg.src = src;
+      lbImg.alt = alt;
+      lb.classList.add("is-open");
+      lb.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function closeLightbox(){
+      if (!lb || !lbImg) return;
+      lb.classList.remove("is-open");
+      lb.setAttribute("aria-hidden", "true");
+      lbImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    (S.personal.photos || []).forEach((p, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "thumb";
+      btn.type = "button";
+      btn.setAttribute("aria-label", p.alt || ("Photo " + (idx+1)));
+
+      const img = document.createElement("img");
+      img.src = p.src;
+      img.alt = p.alt || "";
+      img.loading = "lazy";
+
+      btn.appendChild(img);
+      pg?.appendChild(btn);
+      btn.addEventListener("click", () => openLightbox(p.src, p.alt || "Photo"));
+    });
+
+    lbClose?.addEventListener("click", closeLightbox);
+    lb?.addEventListener("click", (e) => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+  }
+
+
+  // Education
+  const edu = document.getElementById("educationList");
+  (S.education || []).forEach(e => {
+    const item = document.createElement("div");
+    item.className = "eduItem";
+
+    const top = document.createElement("div");
+    top.className = "eduTop";
+
+    const name = document.createElement("div");
+    name.className = "eduName";
+    name.textContent = e.school;
+
+    const meta = document.createElement("div");
+    meta.className = "eduMeta";
+    meta.textContent = e.dates;
+
+    top.appendChild(name);
+    top.appendChild(meta);
+
+    const detail = document.createElement("div");
+    detail.className = "eduDetail";
+    detail.textContent = e.detail;
+
+    item.appendChild(top);
+    item.appendChild(detail);
+    edu.appendChild(item);
+  });
+
+  // Contact
+  document.getElementById("contactTitle").textContent = S.contact?.title || "Contact";
+  document.getElementById("contactBlurb").textContent = S.contact?.blurb || "";
+
+  // Footer
+  document.getElementById("footerName").textContent = b.name;
+  document.getElementById("footerLine").textContent = S.footerLine || "";
+
+})();
+</script>
+</body>
+</html>
